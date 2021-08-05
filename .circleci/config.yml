@@ -25,4 +25,4 @@ jobs:
       # Tests
       - run:
           name: Tests
-          command: npm run test
+          command: npx jest --coverage

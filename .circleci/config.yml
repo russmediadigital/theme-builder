@@ -25,4 +25,9 @@ jobs:
       # Tests
       - run:
           name: Tests
-          command: npx jest --coverage
+          command: npx jest
+
+      # Coverage
+      - run:
+          name: Coverage
+          command: npx codecov --token="$CODECOV_TOKEN"

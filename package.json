@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {

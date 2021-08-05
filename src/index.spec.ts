@@ -64,3 +64,22 @@ test('resolveComponentPath returns correct component', () => {
 
   expect(result3).toBe(path.resolve(__dirname, '..', 'example', 'theme2', 'components', 'comp3.vue'))
 });
+
+test('resolveComponentPath uses cache', () => {
+  const instance = new ThemeResolver(options)
+  const resolver = instance.getResolver('@components/test')!
+
+  const first = getTiming(() => instance.resolveComponentPath('comp1.vue', resolver.directories))
+
+  const second = getTiming(() => instance.resolveComponentPath('comp1.vue', resolver.directories))
+
+  expect(first).not.toBeLessThan(second)
+});
+
+const getTiming = (callable: () => any): number => {
+  const timer = process.hrtime()
+  callable()
+  const secondTimer = process.hrtime()
+
+  return secondTimer[1] - timer[1]
+}

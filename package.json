@@ -1,5 +1,5 @@
 {
-  "name": "@russmedia/theme-builder",
+  "name": "@russmedia/theme-resolver",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/russmediadigital/theme-builder.git"
+    "url": "git+https://github.com/russmediadigital/theme-resolver.git"
   },
   "publishConfig": {
     "access": "public"
@@ -18,9 +18,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/russmediadigital/theme-builder/issues"
+    "url": "https://github.com/russmediadigital/theme-resolver/issues"
   },
-  "homepage": "https://github.com/russmediadigital/theme-builder#readme",
+  "homepage": "https://github.com/russmediadigital/theme-resolver#readme",
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.12",
